@@ -4,17 +4,14 @@
 #
 # See documentation in:
 # https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import os
 
+import fake_useragent
 from scrapy import signals
 from fake_useragent import UserAgent
 import browsercookie
 from scrapy.downloadermiddlewares.cookies import CookiesMiddleware
 
-
-class RandomUserAgentMiddleware(object):
-    def process_request(self, request, spider):
-        ua = UserAgent()
-        request.headers['User-Agent'] = ua.random
 
 
 

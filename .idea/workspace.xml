@@ -2,39 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dc75fcd-068f-4ff3-815a-75071d7b3708" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/job.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chromedriver" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/click_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/items.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/middlewares.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/pipelines.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/spiders/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/spiders/enterprise.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/spiders/zhilian.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/click_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/common.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/corpcrawl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/crack.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/crack_qyxxgs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/dbutils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/tip_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/wc_js.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/scrapy.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/tip_img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/wc_js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fake_useragent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/fake_useragent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/spiders/boss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/spiders/liepin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/spiders/tianyan.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/utils/boss_zhipin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/utils/fake_useragent.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/click_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/job/click_img.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job.json" beforeDir="false" afterPath="$PROJECT_DIR$/job/job.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/items.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/middlewares.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/spiders/enterprise.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/spiders/enterprise.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/spiders/zhilian.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/spiders/zhilian.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/utils/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/utils/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/utils/corpcrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/utils/corpcrawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,17 +29,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/job$test.coverage" NAME="test Coverage Results" MODIFIED="1569219216505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/job$run.coverage" NAME="run Coverage Results" MODIFIED="1568095631595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job" />
     <SUITE FILE_PATH="coverage/job$get_cookies.coverage" NAME="get_cookies Coverage Results" MODIFIED="1568692645687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
-    <SUITE FILE_PATH="coverage/job$crack_qyxxgs.coverage" NAME="crack_qyxxgs Coverage Results" MODIFIED="1568708358177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
-    <SUITE FILE_PATH="coverage/job$main.coverage" NAME="main Coverage Results" MODIFIED="1568960141658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job" />
+    <SUITE FILE_PATH="coverage/job$main.coverage" NAME="main Coverage Results" MODIFIED="1571280421987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job" />
     <SUITE FILE_PATH="coverage/job$enterprisespider.coverage" NAME="enterprisespider Coverage Results" MODIFIED="1568690551862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$GSXTSpider.coverage" NAME="GSXTSpider Coverage Results" MODIFIED="1568691264128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
-    <SUITE FILE_PATH="coverage/job$corpcrawl.coverage" NAME="corpcrawl Coverage Results" MODIFIED="1568709051360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$dbutils.coverage" NAME="dbutils Coverage Results" MODIFIED="1568714355727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
+    <SUITE FILE_PATH="coverage/job$boss_zhipin.coverage" NAME="boss_zhipin Coverage Results" MODIFIED="1571117574870" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
+    <SUITE FILE_PATH="coverage/job$crack_qyxxgs.coverage" NAME="crack_qyxxgs Coverage Results" MODIFIED="1568708358177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
+    <SUITE FILE_PATH="coverage/job$boss.coverage" NAME="boss Coverage Results" MODIFIED="1571117323194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
+    <SUITE FILE_PATH="coverage/job$corpcrawl.coverage" NAME="corpcrawl Coverage Results" MODIFIED="1568709051360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$crack.coverage" NAME="crack Coverage Results" MODIFIED="1568708508574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$zhilian.coverage" NAME="zhilian Coverage Results" MODIFIED="1568034072566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/spiders" />
-    <SUITE FILE_PATH="coverage/job$common.coverage" NAME="common Coverage Results" MODIFIED="1568711116791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
+    <SUITE FILE_PATH="coverage/job$common.coverage" NAME="common Coverage Results" MODIFIED="1569305488061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -74,8 +63,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job/job/spiders/zhilian.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="495">
+              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="51" selection-end-column="90" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/job/spiders/boss.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/job/job/spiders/tianyan.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+              <folding>
+                <element signature="e#24#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job/job/spiders/enterprise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="-47">
+              <caret line="50" column="49" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="49" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
@@ -93,82 +109,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/utils/crack_qyxxgs.py">
+        <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="73" />
-              <folding>
-                <element signature="e#98#107#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="9675">
+              <caret line="661" column="8" selection-start-line="661" selection-start-column="8" selection-end-line="661" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/utils/corpcrawl.py">
+        <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1480">
-              <caret line="333" column="32" lean-forward="true" selection-start-line="333" selection-start-column="32" selection-end-line="333" selection-end-column="32" />
-              <folding>
-                <element signature="e#24#39#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="10095">
+              <caret line="673" selection-start-line="673" selection-end-line="673" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/items.py">
+        <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
-              <folding>
-                <element signature="e#154#167#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="13215">
+              <caret line="912" selection-start-line="912" selection-end-line="912" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/main.py">
+        <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/http/request/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-column="17" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="165">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/middlewares.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-              <folding>
-                <element signature="e#170#196#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="37" column="10" selection-start-line="37" selection-end-line="37" selection-end-column="10" />
-              <folding>
-                <element signature="e#417#426#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/job/job/pipelines.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+            <state relative-caret-position="1320">
+              <caret line="95" column="65" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
               <folding>
                 <element signature="e#194#216#0" expanded="true" />
               </folding>
@@ -179,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/enterprise/adbapi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="180" column="33" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="33" />
+            <state relative-caret-position="6930">
+              <caret line="465" selection-start-line="465" selection-end-line="465" />
             </state>
           </provider>
         </entry>
@@ -196,24 +176,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>homepage</find>
-      <find>//*[@id=&quot;advs&quot;]/div/div[2]/a/@href'}</find>
-      <find>识别请求解析失败</find>
-      <find>cookies</find>
-      <find>jsluid</find>
-      <find>cookie</find>
-      <find>run</find>
-      <find>JobItemLoader</find>
-      <find>md5</find>
-      <find>__jsluid_h</find>
-      <find>执行事务合伙人</find>
-      <find>for</find>
-      <find>SearchResultParse</find>
-      <find>main</find>
-      <find>wangjian</find>
-      <find>except</find>
-      <find>3306</find>
-      <find>port</find>
       <find>utf8</find>
       <find>gconf.</find>
       <find>scope</find>
@@ -226,6 +188,24 @@
       <find>cv2</find>
       <find>coding</find>
       <find>user</find>
+      <find>RandomUserAgentMiddleware</find>
+      <find>cookie</find>
+      <find>geckodriver</find>
+      <find>self</find>
+      <find>remove_html</find>
+      <find>bossCookies</find>
+      <find>excludeSwitches</find>
+      <find>get_json</find>
+      <find>&amp;page=4</find>
+      <find>click</find>
+      <find>https://www.zhipin.com/c101190400/?query=%E6%B8%B8%E6%88%8F&amp;</find>
+      <find>remove_html_list</find>
+      <find>None</find>
+      <find>baidu</find>
+      <find>params</find>
+      <find>baid</find>
+      <find>Request</find>
+      <find>parse_detail</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -236,7 +216,6 @@
       <list>
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/job/job/spiders/lagou.py" />
-        <option value="$PROJECT_DIR$/job/job/middlewares.py" />
         <option value="$PROJECT_DIR$/job/run.py" />
         <option value="$PROJECT_DIR$/job/job/utils/enterprisespider.py" />
         <option value="$PROJECT_DIR$/job/job/utils/GSXTSpider.py" />
@@ -244,20 +223,27 @@
         <option value="$PROJECT_DIR$/job/job/utils/crack_qyxxgs.py" />
         <option value="$PROJECT_DIR$/job/job/utils/crack.py" />
         <option value="$PROJECT_DIR$/job/job/utils/dbutils.py" />
-        <option value="$PROJECT_DIR$/job/job/settings.py" />
-        <option value="$PROJECT_DIR$/job/job/spiders/enterprise.py" />
-        <option value="$PROJECT_DIR$/job/job/utils/corpcrawl.py" />
-        <option value="$PROJECT_DIR$/job/job/items.py" />
-        <option value="$PROJECT_DIR$/job/job/utils/common.py" />
-        <option value="$PROJECT_DIR$/job/job/spiders/zhilian.py" />
-        <option value="$PROJECT_DIR$/job/main.py" />
         <option value="$PROJECT_DIR$/job/job/pipelines.py" />
+        <option value="$PROJECT_DIR$/job/job/items.py" />
+        <option value="$PROJECT_DIR$/test.py" />
+        <option value="$PROJECT_DIR$/job/job/spiders/enterprise.py" />
+        <option value="$PROJECT_DIR$/job/job/utils/common.py" />
+        <option value="$PROJECT_DIR$/job/job/spiders/liepin.py" />
+        <option value="$PROJECT_DIR$/job/job/utils/boss.py" />
+        <option value="$PROJECT_DIR$/job/main.py" />
+        <option value="$PROJECT_DIR$/job/job/middlewares.py" />
+        <option value="$PROJECT_DIR$/job/job/settings.py" />
+        <option value="$PROJECT_DIR$/job/job/utils/boss_zhipin.py" />
+        <option value="$PROJECT_DIR$/job/job/utils/corpcrawl.py" />
+        <option value="$PROJECT_DIR$/job/job/spiders/zhilian.py" />
+        <option value="$PROJECT_DIR$/job/job/spiders/boss.py" />
+        <option value="$PROJECT_DIR$/job/job/spiders/tianyan.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="495" />
-    <option name="y" value="20" />
+    <option name="x" value="106" />
+    <option name="y" value="3" />
     <option name="width" value="1278" />
     <option name="height" value="728" />
   </component>
@@ -266,7 +252,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,24 +288,25 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssr" />
+    <property name="last_opened_file_path" value="F:/网易云课堂《零基础：21天搞定Python分布爬虫》/python_crawler/scrapy_demo/zhipin" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Project\job\job" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Project\job" />
-      <recent name="E:\Project\job\job\job" />
-      <recent name="E:\Project\job\job\job\utils" />
       <recent name="E:\Project\job\job\job\spiders" />
+      <recent name="E:\Project\job\job" />
+      <recent name="E:\Project\job" />
+      <recent name="E:\Project\job\job\job\utils" />
+      <recent name="E:\Project\job\job\job" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Project\job\job" />
     </key>
   </component>
@@ -423,6 +409,50 @@
       <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
+    <configuration name="boss" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="job" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job/job/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="E:\Project\job\job\job\utils\boss_zhipin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="boss_zhipin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="job" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job/job/utils" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job/job/utils/boss_zhipin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="common" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="job" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -437,72 +467,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job/job/utils/common.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="corpcrawl" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="job" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job/job/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job/job/utils/corpcrawl.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="crack" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="job" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job/job/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job/job/utils/crack.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dbutils" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="job" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job/job/utils" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job/job/utils/dbutils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -533,13 +497,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="job" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.dbutils" />
+        <item itemvalue="Python.boss_zhipin" />
+        <item itemvalue="Python.boss" />
         <item itemvalue="Python.common" />
-        <item itemvalue="Python.corpcrawl" />
-        <item itemvalue="Python.crack" />
+        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -560,7 +546,11 @@
       <workItem from="1568774957794" duration="1844000" />
       <workItem from="1568949073713" duration="953000" />
       <workItem from="1568959007428" duration="4075000" />
-      <workItem from="1568973519274" duration="1798000" />
+      <workItem from="1568973519274" duration="39269000" />
+      <workItem from="1569318582589" duration="416000" />
+      <workItem from="1570688724048" duration="6905000" />
+      <workItem from="1571104599076" duration="35778000" />
+      <workItem from="1571294368653" duration="1148000" />
     </task>
     <task id="LOCAL-00001" summary="智联爬虫">
       <created>1568189838477</created>
@@ -608,19 +598,19 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92931000" />
+    <option name="totallyTimeSpent" value="174649000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-8" width="1390" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1706767" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14661655" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.40025574" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.36828643" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.15089513" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.16112532" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -651,8 +641,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/job/job/utils/common.py</url>
-          <line>66</line>
+          <line>70</line>
           <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/job/job/spiders/liepin.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -666,6 +661,12 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>print(str(driver.current_url).split(&quot;?&quot;)[1].split(&quot;&amp;&quot;)[0])
+                except:</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>remove_html(
             etree.tostring(null_if(dom.xpath('//div[@class=&quot;highlights__content&quot;]'))[0], encoding=&quot;utf-8&quot;).decode('utf-8'))</expression-string>
@@ -687,96 +688,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>dom.xpath('//*[@class=&quot;summary-plane__time&quot;]')[0].text</expression-string>
+        <expression-string>html.xpath('//a[@ka=&quot;job-detail-company_custompage&quot;]')[0].attrib.get('title').strip().replace(&quot;\n招聘&quot;,&quot;&quot;)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dom.xpath('//*[@class=&quot;summary-plane__title&quot;]')[0]</expression-string>
+        <expression-string>html.xpath('//a[@ka=&quot;job-detail-company_custompage&quot;]')[0].attrib.get('title').strip()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>insert_sql</expression-string>
+        <expression-string>html.xpath('//a[@ka=&quot;job-detail-company_custompage&quot;]')[0].attrib.get('title')</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>str(detail)</expression-string>
+        <expression-string>len(nodes)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>m = re.findall(r'\[(.*?)\]', str(detail))</expression-string>
+        <expression-string>nodes.extend(new_nodes)</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>code.split('document.cookie')[1]</expression-string>
+        <expression-string>driver</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>[self.base_url + i for i in self.selector.xpath(self.parse_rule)]</expression-string>
+        <expression-string>last_url</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.selector.xpath(self.parse_rule)</expression-string>
+        <expression-string>source</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>remove_html(null_if(dom.xpath('//div[@class=&quot;highlights__content&quot;]'))[0], encoding=&quot;utf-8&quot;).decode('utf-8')</expression-string>
+        <expression-string>links</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://F:/Anaconda3/Lib/site-packages/MySQLdb/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/support/expected_conditions.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/support/wait.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="79" selection-start-line="79" selection-end-line="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/scrapy.cfg">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/core/downloader/middleware.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/spiders/lagou.py" />
-    <entry file="file://$PROJECT_DIR$/job/run.py" />
-    <entry file="file://$PROJECT_DIR$/job/lagou.json" />
-    <entry file="file://$PROJECT_DIR$/job/job.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2018.3/system/python_stubs/452913058/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="2848" column="8" selection-start-line="2848" selection-start-column="8" selection-end-line="2848" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1056">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/Anaconda3/Lib/site-packages/requests/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-466">
@@ -871,20 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="671" selection-start-line="671" selection-end-line="671" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/defer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="653" selection-start-line="653" selection-end-line="653" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/job/job/utils/click_img.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -898,9 +842,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py" />
+    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/core/spidermw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#154#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/fake_useragent.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/job/job/utils/crack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
+        <state relative-caret-position="931">
           <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
           <folding>
             <element signature="e#98#107#0" expanded="true" />
@@ -908,20 +876,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/common.py">
+    <entry file="file://$PROJECT_DIR$/job/job.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="50" column="17" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        <state relative-caret-position="240">
+          <caret column="1670" lean-forward="true" selection-start-column="1670" selection-end-column="1670" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/liepin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="73" column="32" selection-start-line="73" selection-start-column="32" selection-end-line="73" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/shuju.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fake_useragent.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/fake_useragent.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/middlewares.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#47#61#0" expanded="true" />
+            <element signature="e#169#178#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/spiders/enterprise.py">
+    <entry file="file://$PROJECT_DIR$/job/job/utils/corpcrawl.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="237">
+          <caret line="487" column="55" selection-start-line="487" selection-start-column="55" selection-end-line="487" selection-end-column="55" />
           <folding>
             <element signature="e#24#39#0" expanded="true" />
           </folding>
@@ -930,87 +928,142 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/job/job/utils/crack_qyxxgs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="23" selection-end-column="73" />
+        <state relative-caret-position="-10">
+          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
           <folding>
             <element signature="e#98#107#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/items.py">
+    <entry file="file://$PROJECT_DIR$/job/job/utils/common.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        <state relative-caret-position="182">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="20" />
           <folding>
-            <element signature="e#154#167#0" expanded="true" />
+            <element signature="e#47#61#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/main.py">
+    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/corpcrawl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1480">
-          <caret line="333" column="32" lean-forward="true" selection-start-line="333" selection-start-column="32" selection-end-line="333" selection-end-column="32" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
+    <entry file="file://$PROJECT_DIR$/job/scrapy.cfg">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/spiders/zhilian.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/middlewares.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#170#196#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/enterprise/adbapi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="180" column="33" selection-start-line="180" selection-start-column="29" selection-end-line="180" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/job/job/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="37" column="10" selection-start-line="37" selection-end-line="37" selection-end-column="10" />
+        <state relative-caret-position="-65">
+          <caret line="29" column="10" lean-forward="true" selection-start-line="29" selection-start-column="10" selection-end-line="29" selection-end-column="10" />
           <folding>
             <element signature="e#417#426#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/boss_zhipin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1065">
+          <caret line="81" column="58" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/defer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9570">
+          <caret line="653" selection-start-line="653" selection-end-line="653" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9675">
+          <caret line="661" column="8" selection-start-line="661" selection-start-column="8" selection-end-line="661" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/task.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10095">
+          <caret line="673" selection-start-line="673" selection-end-line="673" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13215">
+          <caret line="912" selection-start-line="912" selection-end-line="912" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/http/request/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/job/job/pipelines.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="84" column="40" lean-forward="true" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
+        <state relative-caret-position="1320">
+          <caret line="95" column="65" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
           <folding>
             <element signature="e#194#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/enterprise/adbapi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6930">
+          <caret line="465" selection-start-line="465" selection-end-line="465" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/enterprise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-47">
+          <caret line="50" column="49" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="49" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/zhilian.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="51" selection-end-column="90" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/boss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/tianyan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>

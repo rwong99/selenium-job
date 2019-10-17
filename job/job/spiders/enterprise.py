@@ -81,9 +81,15 @@ class EnterPriseSpider(scrapy.Spider):
             item['registration'] = company_info(info_list, "登记机关：")
             item['check'] = company_info(info_list, "核准日期：")
             item['status'] = company_info(info_list, "登记状态：")
-            residence = company_info(info_list, "住所：")
-            premises = company_info(info_list, "主要经营场所：")
-            item['address'] = residence if "无" == premises else premises
+            address1 = company_info(info_list, "住所：")
+            address2 = company_info(info_list, "主要经营场所：")
+            address3 = company_info(info_list, "营业场所：")
+            if address1 != "无":
+                item['address'] = address1
+            elif address2 != "无":
+                item['address'] = address2
+            else:
+                item['address'] = address3
             item['scope'] = company_info(info_list, "经营范围：")
             item['partner'] = company_info(info_list, "执行事务合伙人:")
             yield item

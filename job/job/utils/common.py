@@ -47,6 +47,10 @@ def remove_html(html):
     result = dr.sub('', html)
     return result
 
+def remove_html_list(html):
+    dr = re.compile(r'<[^>]+>', re.S)
+    result = dr.sub(',', html)
+    return result.split(",")
 
 def parse_html():
     with open('a', 'rb') as f:
@@ -122,4 +126,4 @@ def down_image():
 
 
 if __name__ == "__main__":
-    parse_json()
+    print(remove_html_list('<p>苏州<em class="dolt"></em>1-3年<em class="dolt"></em>大专</p>').split(","))

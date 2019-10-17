@@ -42,6 +42,8 @@ class JobItem(scrapy.Item):
         insert_sql = """
             insert into job(update_date,source,id, recruitment_position,company_name, education_background,work_experience,salary,job_requirements,company_info,company_address,company_welfare,crawl_date,url,keyword)
             VALUES (%s,%s,%s, %s, %s, %s, %s,%s, %s, %s, %s, %s, %s,%s,%s) 
+            ON DUPLICATE KEY UPDATE company_address=VALUES(company_address),crawl_date=VALUES(crawl_date),update_date=VALUES(update_date),
+            company_name=VALUES(company_name),education_background=VALUES(education_background),work_experience=VALUES(work_experience),job_requirements=VALUES(job_requirements)
         """
         params = (self["update_date"],self["source"],self["id"], self["recruitment_position"], self["company_name"], self["education_background"],
                   self["work_experience"], self["salary"], self["job_requirements"], self["company_info"],

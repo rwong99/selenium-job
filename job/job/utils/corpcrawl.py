@@ -312,7 +312,7 @@ class CorpSearch(object):
 
         befor_click_img = "F:\\Anaconda3\\Lib\\captcha\\gt_validate\\befor_click.png"
         after_click_path = "F:\\Anaconda3\\Lib\\captcha\\gt_validate\\after_click.png"
-            befor_img = cv2.imread(befor_click_img)
+        befor_img = cv2.imread(befor_click_img)
         after_img = cv2.imread(after_click_path)
 
         befor_gray = cv2.cvtColor(befor_img, cv2.COLOR_BGR2GRAY)

@@ -23,8 +23,9 @@ NEWSPIDER_MODULE = 'job.spiders'
 ROBOTSTXT_OBEY = False
 COMMANDS_MODULE = 'job'
 
-DOWNLOAD_DELAY = 0.5
-COOKIES_ENABLED = True
+CONCURRENT_REQUESTS=1
+DOWNLOAD_DELAY = 5
+COOKIES_ENABLED = False
 
 import sys
 
@@ -44,11 +45,11 @@ ITEM_PIPELINES = {
 }
 
 DOWNLOADER_MIDDLEWARES = {
-    'job.middlewares.RandomUserAgentMiddleware': 1,
-    'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+    # 'job.middlewares.RandomUserAgentMiddleware': 1,
+    # 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
 
-    'job.middlewares.BrowserCookiesDownloaderMiddleware': 910,
-    'scrapy.downloadermiddlewares.cookies.CookiesMiddleware': None
+    #'job.middlewares.BrowserCookiesDownloaderMiddleware': 910,
+    #'scrapy.downloadermiddlewares.cookies.CookiesMiddleware': None
 }
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
