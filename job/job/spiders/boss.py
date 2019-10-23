@@ -32,6 +32,7 @@ from job.utils.common import *
 from job.utils.common import remove_html, remove_html_list
 
 
+
 class BossSpider(scrapy.Spider):
     name = 'boss'
     allowed_domains = ['zhipin.com']
@@ -39,6 +40,7 @@ class BossSpider(scrapy.Spider):
     nodes = []
 
     def parse(self, response):
+
         driver = None
         chrome_options = webdriver.ChromeOptions()
         # proxy_url = get_random_proxy()

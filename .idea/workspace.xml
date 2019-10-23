@@ -2,24 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dc75fcd-068f-4ff3-815a-75071d7b3708" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fake_useragent.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/fake_useragent.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/spiders/boss.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/spiders/liepin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/spiders/tianyan.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/boss_zhipin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job/job/utils/fake_useragent.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/utils/input.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/job/job/utils/tianyan_login.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/click_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/job/click_img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job/job.json" beforeDir="false" afterPath="$PROJECT_DIR$/job/job.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job/job/items.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/items.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/job/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/job/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/job/spiders/enterprise.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/spiders/enterprise.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/job/spiders/zhilian.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/spiders/zhilian.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/job/utils/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/utils/common.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job/job/utils/corpcrawl.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/utils/corpcrawl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/spiders/boss.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/spiders/boss.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/job/job/spiders/tianyan.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/job/spiders/tianyan.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/job/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/job/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,7 +21,7 @@
     <SUITE FILE_PATH="coverage/job$test.coverage" NAME="test Coverage Results" MODIFIED="1569219216505" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/job$run.coverage" NAME="run Coverage Results" MODIFIED="1568095631595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job" />
     <SUITE FILE_PATH="coverage/job$get_cookies.coverage" NAME="get_cookies Coverage Results" MODIFIED="1568692645687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
-    <SUITE FILE_PATH="coverage/job$main.coverage" NAME="main Coverage Results" MODIFIED="1571280421987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job" />
+    <SUITE FILE_PATH="coverage/job$main.coverage" NAME="main Coverage Results" MODIFIED="1571824887599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job" />
     <SUITE FILE_PATH="coverage/job$enterprisespider.coverage" NAME="enterprisespider Coverage Results" MODIFIED="1568690551862" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$GSXTSpider.coverage" NAME="GSXTSpider Coverage Results" MODIFIED="1568691264128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$dbutils.coverage" NAME="dbutils Coverage Results" MODIFIED="1568714355727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
@@ -40,6 +29,7 @@
     <SUITE FILE_PATH="coverage/job$crack_qyxxgs.coverage" NAME="crack_qyxxgs Coverage Results" MODIFIED="1568708358177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$boss.coverage" NAME="boss Coverage Results" MODIFIED="1571117323194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$corpcrawl.coverage" NAME="corpcrawl Coverage Results" MODIFIED="1568709051360" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
+    <SUITE FILE_PATH="coverage/job$tianyan_login.coverage" NAME="tianyan_login Coverage Results" MODIFIED="1571305233754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$crack.coverage" NAME="crack Coverage Results" MODIFIED="1568708508574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
     <SUITE FILE_PATH="coverage/job$zhilian.coverage" NAME="zhilian Coverage Results" MODIFIED="1568034072566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/spiders" />
     <SUITE FILE_PATH="coverage/job$common.coverage" NAME="common Coverage Results" MODIFIED="1569305488061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/job/job/utils" />
@@ -60,14 +50,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/spiders/zhilian.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/job/job/spiders/tianyan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="51" selection-end-column="90" />
+            <state relative-caret-position="75">
+              <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -75,8 +74,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job/job/spiders/boss.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+            <state relative-caret-position="1215">
+              <caret line="111" column="54" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="54" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -84,14 +83,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/job/job/spiders/tianyan.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/job/items.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            <state relative-caret-position="1470">
+              <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+              <folding>
+                <element signature="e#154#167#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/job/utils/boss_zhipin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/job/utils/crack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+              <folding>
+                <element signature="e#98#107#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/job/utils/corpcrawl.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2670">
+              <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/job/job/utils/tianyan_login.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -99,68 +140,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/job/job/spiders/enterprise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret line="50" column="49" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="49" />
+            <state relative-caret-position="495">
+              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9675">
-              <caret line="661" column="8" selection-start-line="661" selection-start-column="8" selection-end-line="661" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/task.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10095">
-              <caret line="673" selection-start-line="673" selection-end-line="673" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/base.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13215">
-              <caret line="912" selection-start-line="912" selection-end-line="912" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/http/request/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/job/job/pipelines.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="95" column="65" selection-start-line="95" selection-start-column="65" selection-end-line="95" selection-end-column="65" />
-              <folding>
-                <element signature="e#194#216#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/enterprise/adbapi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6930">
-              <caret line="465" selection-start-line="465" selection-end-line="465" />
             </state>
           </provider>
         </entry>
@@ -176,18 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>utf8</find>
-      <find>gconf.</find>
-      <find>scope</find>
-      <find>MysqlTwistedPipline</find>
-      <find>MYSQL_HOST</find>
-      <find>detail_request</find>
-      <find>wc_js</find>
-      <find>self[&quot;id&quot;],</find>
-      <find>cv2cv2</find>
-      <find>cv2</find>
-      <find>coding</find>
-      <find>user</find>
       <find>RandomUserAgentMiddleware</find>
       <find>cookie</find>
       <find>geckodriver</find>
@@ -206,7 +178,22 @@
       <find>baid</find>
       <find>Request</find>
       <find>parse_detail</find>
+      <find>---&gt;</find>
+      <find>tianyancha_scrapy</find>
+      <find>headless</find>
+      <find>windows</find>
+      <find>window_si</find>
+      <find>driver</find>
+      <find>get_tracks</find>
+      <find>get_track</find>
+      <find>StandardCompanyItem</find>
+      <find>47</find>
+      <find>table[0]</find>
+      <find>company_name</find>
     </findStrings>
+    <replaceStrings>
+      <replace>table</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -224,26 +211,27 @@
         <option value="$PROJECT_DIR$/job/job/utils/crack.py" />
         <option value="$PROJECT_DIR$/job/job/utils/dbutils.py" />
         <option value="$PROJECT_DIR$/job/job/pipelines.py" />
-        <option value="$PROJECT_DIR$/job/job/items.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/job/job/spiders/enterprise.py" />
         <option value="$PROJECT_DIR$/job/job/utils/common.py" />
         <option value="$PROJECT_DIR$/job/job/spiders/liepin.py" />
         <option value="$PROJECT_DIR$/job/job/utils/boss.py" />
-        <option value="$PROJECT_DIR$/job/main.py" />
         <option value="$PROJECT_DIR$/job/job/middlewares.py" />
         <option value="$PROJECT_DIR$/job/job/settings.py" />
         <option value="$PROJECT_DIR$/job/job/utils/boss_zhipin.py" />
-        <option value="$PROJECT_DIR$/job/job/utils/corpcrawl.py" />
         <option value="$PROJECT_DIR$/job/job/spiders/zhilian.py" />
+        <option value="$PROJECT_DIR$/job/job/utils/corpcrawl.py" />
+        <option value="$PROJECT_DIR$/job/job/utils/tianyan_login.py" />
         <option value="$PROJECT_DIR$/job/job/spiders/boss.py" />
+        <option value="$PROJECT_DIR$/job/main.py" />
+        <option value="$PROJECT_DIR$/job/job/items.py" />
         <option value="$PROJECT_DIR$/job/job/spiders/tianyan.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="106" />
-    <option name="y" value="3" />
+    <option name="x" value="127" />
+    <option name="y" value="66" />
     <option name="width" value="1278" />
     <option name="height" value="728" />
   </component>
@@ -252,6 +240,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -288,7 +277,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,10 +288,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\job\job\job\utils" />
       <recent name="E:\Project\job\job\job\spiders" />
       <recent name="E:\Project\job\job" />
       <recent name="E:\Project\job" />
-      <recent name="E:\Project\job\job\job\utils" />
       <recent name="E:\Project\job\job\job" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -497,7 +485,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="tianyan_login" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="job" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -505,12 +493,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/job/job/utils" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/job/job/utils/tianyan_login.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -522,10 +510,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.tianyan_login" />
         <item itemvalue="Python.boss_zhipin" />
         <item itemvalue="Python.boss" />
         <item itemvalue="Python.common" />
-        <item itemvalue="Python.test" />
       </list>
     </recent_temporary>
   </component>
@@ -550,7 +538,9 @@
       <workItem from="1569318582589" duration="416000" />
       <workItem from="1570688724048" duration="6905000" />
       <workItem from="1571104599076" duration="35778000" />
-      <workItem from="1571294368653" duration="1148000" />
+      <workItem from="1571294368653" duration="18544000" />
+      <workItem from="1571808814822" duration="10500000" />
+      <workItem from="1571820430954" duration="4869000" />
     </task>
     <task id="LOCAL-00001" summary="智联爬虫">
       <created>1568189838477</created>
@@ -594,23 +584,30 @@
       <option name="project" value="LOCAL" />
       <updated>1568960468415</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="boss爬虫">
+      <created>1571297186782</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571297186782</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174649000" />
+    <option name="totallyTimeSpent" value="207414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="-8" width="1390" height="916" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14661655" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14887218" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.15089513" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.16112532" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3005115" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.21099745" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -634,7 +631,8 @@
     <MESSAGE value="智联爬虫" />
     <MESSAGE value="企业信息爬虫" />
     <MESSAGE value="智联招聘爬虫" />
-    <option name="LAST_COMMIT_MESSAGE" value="智联招聘爬虫" />
+    <MESSAGE value="boss爬虫" />
+    <option name="LAST_COMMIT_MESSAGE" value="boss爬虫" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,6 +646,11 @@
           <url>file://$PROJECT_DIR$/job/job/spiders/liepin.py</url>
           <line>58</line>
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/job/job/utils/corpcrawl.py</url>
+          <line>142</line>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -688,92 +691,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>html.xpath('//a[@ka=&quot;job-detail-company_custompage&quot;]')[0].attrib.get('title').strip().replace(&quot;\n招聘&quot;,&quot;&quot;)</expression-string>
+        <expression-string>remove_html(etree.tostring(html.xpath(&quot;//div[@class='legal-representative']&quot;)[0],encoding='utf-8').decode('utf-8'))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>html.xpath('//a[@ka=&quot;job-detail-company_custompage&quot;]')[0].attrib.get('title').strip()</expression-string>
+        <expression-string>remove_html(etree.tostring(html.xpath(&quot;//div[@class='legal-representative']&quot;),encoding='utf-8').decode('utf-8'))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>html.xpath('//a[@ka=&quot;job-detail-company_custompage&quot;]')[0].attrib.get('title')</expression-string>
+        <expression-string>remove_html(etree.tostring(html.xpath(&quot;//div[@class='summary']/div/div&quot;)[0],encoding='utf-8').decode('utf-8'))</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>len(nodes)</expression-string>
+        <expression-string>html.xpath(&quot;//div[@class='summary']/div/div&quot;)[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>nodes.extend(new_nodes)</expression-string>
+        <expression-string>html.xpath(&quot;//div[@class='summary']/div/div/&quot;)[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>driver</expression-string>
+        <expression-string>html.xpath(&quot;//div[@class='summary']/div/div//text()&quot;)[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>last_url</expression-string>
+        <expression-string>html.xpath(&quot;//div[@class='summary']/div/div/span/text()&quot;)[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>source</expression-string>
+        <expression-string>html.xpath(&quot;//div[@class='in-block sup-ie-company-header-child-2']/div/div/text()&quot;)[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>links</expression-string>
+        <expression-string>html.xpath(&quot;//div[@class='in-block sup-ie-company-header-child-2']/div/text()&quot;)[0]</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://F:/Anaconda3/Lib/site-packages/requests/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/requests/sessions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5820">
-          <caret line="417" column="32" selection-start-line="417" selection-start-column="26" selection-end-line="417" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/requests/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-          <folding>
-            <element signature="e#181#191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/copyheaders/copyheaders.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3">
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/common/action_chains.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="62" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/enterprisespider.py" />
     <entry file="file://$PROJECT_DIR$/job/job/utils/GSXTSpider.py" />
     <entry file="file://F:/Anaconda3/Lib/site-packages/execjs/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -815,13 +779,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/item.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/job/job/utils/dbutils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -853,28 +810,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/items.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="13" />
-          <folding>
-            <element signature="e#154#167#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/job/job/utils/fake_useragent.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/crack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-          <folding>
-            <element signature="e#98#107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/job/job.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -893,13 +830,6 @@
     <entry file="file://$PROJECT_DIR$/job/job/utils/shuju.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fake_useragent.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -916,26 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/corpcrawl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="487" column="55" selection-start-line="487" selection-start-column="55" selection-end-line="487" selection-end-column="55" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/crack_qyxxgs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="81" column="30" lean-forward="true" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
-          <folding>
-            <element signature="e#98#107#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/job/job/utils/common.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -943,13 +853,6 @@
           <folding>
             <element signature="e#47#61#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/crawler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
@@ -963,23 +866,6 @@
           <folding>
             <element signature="e#417#426#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/utils/boss_zhipin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="81" column="58" selection-start-line="81" selection-start-column="58" selection-end-line="81" selection-end-column="58" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/defer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9570">
-          <caret line="653" selection-start-line="653" selection-end-line="653" />
         </state>
       </provider>
     </entry>
@@ -1028,13 +914,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/spiders/enterprise.py">
+    <entry file="file://$PROJECT_DIR$/job/job/utils/captcha1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/captcha2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/selenium/webdriver/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/crawler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="50" column="49" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="49" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="162">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
         </state>
       </provider>
     </entry>
@@ -1048,22 +940,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/spiders/boss.py">
+    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/spiders/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="61" column="56" lean-forward="true" selection-start-line="61" selection-start-column="56" selection-end-line="61" selection-end-column="56" />
+        <state relative-caret-position="615">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/crack_qyxxgs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <element signature="e#98#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/fake_useragent/fake.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/twisted/internet/defer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="663" selection-start-line="663" selection-end-line="663" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/Anaconda3/Lib/site-packages/scrapy/item.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="72" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/tianyan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="90" column="26" lean-forward="true" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/job/job/spiders/tianyan.py">
+    <entry file="file://$PROJECT_DIR$/job/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+        <state relative-caret-position="120">
+          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/boss.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1215">
+          <caret line="111" column="54" selection-start-line="111" selection-start-column="42" selection-end-line="111" selection-end-column="54" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/items.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="100" column="37" selection-start-line="100" selection-start-column="37" selection-end-line="100" selection-end-column="37" />
+          <folding>
+            <element signature="e#154#167#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/boss_zhipin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#24#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/crack.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding>
+            <element signature="e#98#107#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/corpcrawl.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2670">
+          <caret line="209" column="8" selection-start-line="209" selection-start-column="8" selection-end-line="209" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/utils/tianyan_login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/job/job/spiders/enterprise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

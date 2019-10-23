@@ -79,3 +79,51 @@ class CompanyItem(scrapy.Item):
                   self["scope"],self['partner'])
 
         return insert_sql, params
+
+
+class StandardCompanyItem(scrapy.Item):
+    legal_representative = scrapy.Field()
+    registered_capital = scrapy.Field()
+    reality_capital = scrapy.Field()
+    establishment_date = scrapy.Field()
+    business_status = scrapy.Field()
+    social_credit_code = scrapy.Field()
+    business_registration_num = scrapy.Field()
+    taxpayer_num = scrapy.Field()
+    organization_code = scrapy.Field()
+    company_type = scrapy.Field()
+    industry = scrapy.Field()
+    approval_date = scrapy.Field()
+    registration_authority = scrapy.Field()
+    operating_period = scrapy.Field()
+    taxpayer_qualification = scrapy.Field()
+    staff_size = scrapy.Field()
+    participants_num = scrapy.Field()
+    used_name = scrapy.Field()
+    english_name = scrapy.Field()
+    registered_address = scrapy.Field()
+    business_scope = scrapy.Field()
+    company_name = scrapy.Field()
+    telephone = scrapy.Field()
+    url = scrapy.Field()
+    address = scrapy.Field()
+    introduction = scrapy.Field()
+    job_company_name = scrapy.Field()
+
+    def get_insert_sql(self):
+        insert_sql = """
+            insert into standard_business(legal_representative,registered_capital,reality_capital,establishment_date,business_status,social_credit_code,business_registration_num,taxpayer_num,organization_code,company_type,industry,approval_date,registration_authority,operating_period,taxpayer_qualification,staff_size,participants_num,used_name,english_name,registered_address,business_scope,company_name,telephone,url,address,introduction,job_company_name)
+            VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) 
+            ON DUPLICATE KEY UPDATE 
+            legal_representative=VALUES(legal_representative),
+            business_status=VALUES(business_status),
+            staff_size=VALUES(staff_size),
+            participants_num=VALUES(participants_num),
+            business_scope=VALUES(business_scope),
+            registered_capital=VALUES(registered_capital),
+            reality_capital=VALUES(reality_capital)
+        """
+        params = (self["legal_representative"],self["registered_capital"],self["reality_capital"],self["establishment_date"],self["business_status"],self["social_credit_code"],self["business_registration_num"],self["taxpayer_num"],self["organization_code"],self["company_type"],self["industry"],self["approval_date"],self["registration_authority"],self["operating_period"],self["taxpayer_qualification"],self["staff_size"],self["participants_num"],self["used_name"],self["english_name"],self["registered_address"],self["business_scope"],self["company_name"],self["telephone"],self["url"],self["address"],self["introduction"],self["job_company_name"])
+
+        return insert_sql, params
+
