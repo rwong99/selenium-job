@@ -32,10 +32,13 @@ import sys
 BASE_DIR = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 sys.path.insert(0, os.path.join(BASE_DIR, 'job'))
 
-MYSQL_HOST = "127.0.0.2"
+
+MYSQL_HOST = "192.168.2.7"
+MYSQL_PASSWORD = "186"
+# MYSQL_HOST = "127.0.0.1"
+# MYSQL_PASSWORD = "3306"
 MYSQL_DBNAME = "scrapy"
 MYSQL_USER = "root"
-MYSQL_PASSWORD = ""
 MYSQL_PORT = 3306
 MYSQL_CHARSET = "utf8"
 

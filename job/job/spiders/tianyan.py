@@ -6,7 +6,7 @@ import time
 import urllib
 from datetime import datetime
 from urllib import parse
-from PIL import Image, ImageGrab
+from PIL import Image
 import fake_useragent
 import scrapy
 from fake_useragent import UserAgent
@@ -47,7 +47,7 @@ class TianYanSpider(scrapy.Spider):
     # chrome_options.add_argument('--proxy-server=https://' + proxy_url.strip())
     prefs = {
         'profile.default_content_setting_values': {
-            'images': 1,  # 加载图片
+            # 'images': 2,  # 不加载图片
             "User-Agent": UserAgent().random,  # 更换UA
         }
     }
@@ -172,6 +172,10 @@ class TianYanSpider(scrapy.Spider):
         except:
             pass
 
+
+        with open("tianyan.html", "a+") as f:
+            f.writelines(self.driver.page_source)
+            f.writelines("\n")
         # 登陆按钮
         self.driver.find_element_by_xpath('//*[@id="web-content"]/div/div[1]/div[1]/div/div/div[2]/div/div[4]/a').click()
         time.sleep(2)

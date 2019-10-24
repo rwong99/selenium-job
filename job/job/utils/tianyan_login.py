@@ -5,8 +5,11 @@
 @LastEditTime: 2019-08-30 16:11:29
 @LastEditors: Please set LastEditors
 '''
+import platform
+
+from fake_useragent import UserAgent
 from selenium import webdriver
-from PIL import Image, ImageGrab
+from PIL import Image
 from io import BytesIO
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support import expected_conditions as EC
@@ -16,8 +19,28 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 # chrom的驱动位置
-chrome_path = 'chromedriver.exe'
-driver = webdriver.Chrome(chrome_path)
+driver = None
+chrome_options = webdriver.ChromeOptions()
+# proxy_url = get_random_proxy()
+# print(proxy_url + "代理服务器正在爬取")
+# chrome_options.add_argument('--proxy-server=https://' + proxy_url.strip())
+prefs = {
+    'profile.default_content_setting_values': {
+        'images': 1,  # 加载图片
+        "User-Agent": UserAgent().random,  # 更换UA
+    }
+}
+chrome_options.add_experimental_option("prefs", prefs)
+chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+if platform.system() == "Windows":
+    driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+elif platform.system() == "Linux":
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--no-sandbox')
+    driver = webdriver.Chrome(
+        executable_path="/usr/bin/chromedriver",
+        chrome_options=chrome_options)
 
 
 class Tianyancha:
