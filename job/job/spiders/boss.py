@@ -38,6 +38,7 @@ class BossSpider(scrapy.Spider):
     allowed_domains = ['zhipin.com']
     start_urls = ['https://www.zhipin.com/']
     nodes = []
+    driver = None
 
     def closed(self, reason):
         self.driver.close()
@@ -45,8 +46,6 @@ class BossSpider(scrapy.Spider):
         print('spider关闭原因:', reason)
 
     def parse(self, response):
-
-        driver = None
         chrome_options = webdriver.ChromeOptions()
         # proxy_url = get_random_proxy()
         # print(proxy_url + "代理服务器正在爬取")
@@ -60,58 +59,58 @@ class BossSpider(scrapy.Spider):
         chrome_options.add_experimental_option("prefs", prefs)
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         if platform.system() == "Windows":
-            driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+            self.driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
         elif platform.system() == "Linux":
             chrome_options.add_argument("--headless")
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--no-sandbox')
-            driver = webdriver.Chrome(
+            self.driver = webdriver.Chrome(
                 executable_path="/usr/bin/chromedriver",
                 chrome_options=chrome_options)
-        driver.set_window_size(100, 100)
+        # self.driver.set_window_size(200, 200)
 
         data = ["游戏", "期货", "贷款"]
         for kw in data:
             url = "https://www.zhipin.com/c101190400/?query={}".format(kw)
-            driver.get(url)
+            self.driver.get(url)
             time.sleep(2)
             # 获取信息
-            last_url = driver.current_url
-            source = etree.HTML(driver.page_source)
+            last_url = self.driver.current_url
+            source = etree.HTML(self.driver.page_source)
             links = source.xpath("//div[@class='job-primary']/div[@class='info-primary']//a/@href")
             global nodes
             nodes = list(map(lambda x: "https://www.zhipin.com{}".format(x), links))
 
             while len(source.xpath('//div[@class="page"]/a[@class="next" and @ka="page-next"]')) == 1:
-                next_page = driver.find_element_by_xpath(
+                next_page = self.driver.find_element_by_xpath(
                     '//div[@class="page"]/a[@class="next" and @ka="page-next"]')
-                WebDriverWait(driver, 10).until(expected_conditions.element_to_be_clickable(
+                WebDriverWait(self.driver, 10).until(expected_conditions.element_to_be_clickable(
                     (By.XPATH, '//div[@class="page"]/a[@class="next" and @ka="page-next"]')))
-                current_url = driver.current_url
+                current_url = self.driver.current_url
                 while last_url == current_url:
                     self.loop_try(next_page)
-                    last_url = driver.current_url
-                print(driver.current_url)
-                source = etree.HTML(driver.page_source)
+                    last_url = self.driver.current_url
+                print(self.driver.current_url)
+                source = etree.HTML(self.driver.page_source)
                 new_links = source.xpath("//div[@class='job-primary']/div[@class='info-primary']//a/@href")
                 new_nodes = list(map(lambda x: "https://www.zhipin.com{}".format(x), new_links))
                 nodes.extend(new_nodes)
             yield Request(url="https://www.zhipin.com", callback=self.parse_detail,
-                          meta={'params': (nodes, driver, kw)},dont_filter=True)
+                          meta={'params': (nodes, kw)},dont_filter=True)
 
     def parse_detail(self,response):
-        nodes, driver, kw = response.meta.get("params")
+        nodes, kw = response.meta.get("params")
         for node in nodes:
             print(node)
-            driver.execute_script("window.open('%s')" % node)
+            self.driver.execute_script("window.open('%s')" % node)
             time.sleep(2)
-            driver.switch_to.window(driver.window_handles[1])
-            WebDriverWait(driver, timeout=10).until(
+            self.driver.switch_to.window(self.driver.window_handles[1])
+            WebDriverWait(self.driver, timeout=10).until(
                 EC.presence_of_element_located((By.XPATH, "//div[@class='detail-content']"))
             )
-            html = etree.HTML(driver.page_source)
-            driver.close()
-            driver.switch_to.window(driver.window_handles[0])
+            html = etree.HTML(self.driver.page_source)
+            self.driver.close()
+            self.driver.switch_to.window(self.driver.window_handles[0])
 
             item = JobItem()
             item['recruitment_position'] = html.xpath(

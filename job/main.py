@@ -7,7 +7,7 @@ import os
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 # execute(["scrapy", "crawl", "enterprise","-a","word=苏州金螳螂建筑装饰股份有限公司"])
-# execute(["scrapy", "crawl", "zhilian"])
+execute(["scrapy", "crawl", "zhilian"])
 # execute(["scrapy", "crawl", "boss"])
-execute(["scrapy", "crawl", "tianyan","-a","word=盟拓软件(苏州)有限公司上海分公司"])
+# execute(["scrapy", "crawl", "tianyan","-a","word=盟拓软件(苏州)有限公司上海分公司"])
 # execute(["scrapy", "crawl", "liepin"])

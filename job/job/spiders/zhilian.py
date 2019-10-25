@@ -51,12 +51,6 @@ class ZhilianSpider(scrapy.Spider):
                 callback=self.parse)  # response获取meta
 
     def parse(self, response):
-        job_list = json.loads(response.text)["data"]["results"]
-        for job in job_list:
-            yield Request(url=job["positionURL"], callback=self.parse_detail,
-                          meta={'cookiejar': 'chrome', 'kw': response.meta.get("kw", "")})
-
-    def parse_detail(self, response):
         chrome_options = webdriver.ChromeOptions()
         # proxy_url = get_random_proxy()
         # print(proxy_url + "代理服务器正在爬取")
@@ -70,22 +64,26 @@ class ZhilianSpider(scrapy.Spider):
         chrome_options.add_experimental_option("prefs", prefs)
         chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
         if platform.system() == "Windows":
-            driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+            self.driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
         elif platform.system() == "Linux":
             chrome_options.add_argument("--headless")
             chrome_options.add_argument('--disable-gpu')
             chrome_options.add_argument('--no-sandbox')
-            driver = webdriver.Chrome(
+            self.driver = webdriver.Chrome(
                 executable_path="/usr/bin/chromedriver",
                 chrome_options=chrome_options)
-        wait = WebDriverWait(driver, 15)
+        job_list = json.loads(response.text)["data"]["results"]
+        for job in job_list:
+            yield Request(url=job["positionURL"], callback=self.parse_detail,
+                          meta={'cookiejar': 'chrome', 'kw': response.meta.get("kw", "")})
 
+    def parse_detail(self, response):
         print(response.url)
-        driver.get(response.url)
-        driver.refresh()
+        self.driver.get(response.url)
+        self.driver.refresh()
         time.sleep(5)
-        driver.implicitly_wait(20)
-        dom = etree.HTML(driver.page_source)
+        self.driver.implicitly_wait(20)
+        dom = etree.HTML(self.driver.page_source)
         item = JobItem()
         item['source'] = "智联招聘"
         item['recruitment_position'] = null_if(dom.xpath('//*[@class="summary-plane__title"]'))
@@ -105,7 +103,7 @@ class ZhilianSpider(scrapy.Spider):
             item['company_welfare'] = remove_html(etree.tostring(dom.xpath('//div[@class="highlights__content"]')[0], encoding="utf-8").decode('utf-8'))
         else:
             item['company_welfare'] = '无'
-        item['id'] = get_md5(driver.current_url)
+        item['id'] = get_md5(self.driver.current_url)
         item['keyword'] = response.meta.get("kw", "")
         item['url'] = response.url
         item['crawl_date'] = datetime.now().strftime("%Y-%m-%d")
