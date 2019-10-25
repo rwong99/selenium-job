@@ -39,6 +39,11 @@ class BossSpider(scrapy.Spider):
     start_urls = ['https://www.zhipin.com/']
     nodes = []
 
+    def closed(self, reason):
+        self.driver.close()
+        self.driver.quit()
+        print('spider关闭原因:', reason)
+
     def parse(self, response):
 
         driver = None
@@ -63,7 +68,7 @@ class BossSpider(scrapy.Spider):
             driver = webdriver.Chrome(
                 executable_path="/usr/bin/chromedriver",
                 chrome_options=chrome_options)
-        # driver.set_window_size(500, 200)
+        driver.set_window_size(100, 100)
 
         data = ["游戏", "期货", "贷款"]
         for kw in data:

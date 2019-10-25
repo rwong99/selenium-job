@@ -23,7 +23,12 @@ class ZhilianSpider(scrapy.Spider):
     name = 'zhilian'
     allowed_domains = ['zhaopin.com']
     start_urls = ['https://sou.zhaopin.com/']
+    driver = None
 
+    def closed(self, reason):
+        self.driver.close()
+        self.driver.quit()
+        print('spider关闭原因:', reason)
 
 
     def start_requests(self):
@@ -52,7 +57,6 @@ class ZhilianSpider(scrapy.Spider):
                           meta={'cookiejar': 'chrome', 'kw': response.meta.get("kw", "")})
 
     def parse_detail(self, response):
-        driver = None
         chrome_options = webdriver.ChromeOptions()
         # proxy_url = get_random_proxy()
         # print(proxy_url + "代理服务器正在爬取")
