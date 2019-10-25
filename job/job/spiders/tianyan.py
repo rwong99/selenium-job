@@ -33,6 +33,8 @@ from job.utils.common import remove_html, remove_html_list
 
 from job.items import StandardCompanyItem
 
+from job.utils.dbutils import MysqlConnection
+
 
 class TianYanSpider(scrapy.Spider):
     name = 'tianyan'
@@ -40,35 +42,48 @@ class TianYanSpider(scrapy.Spider):
     start_urls = ['https://www.tianyancha.com']
     nodes = []
     base_url = "https://www.tianyancha.com/search?key="
-    driver = None
-    chrome_options = webdriver.ChromeOptions()
-    # proxy_url = get_random_proxy()
-    # print(proxy_url + "代理服务器正在爬取")
-    # chrome_options.add_argument('--proxy-server=https://' + proxy_url.strip())
-    prefs = {
-        'profile.default_content_setting_values': {
-            # 'images': 2,  # 不加载图片
-            "User-Agent": UserAgent().random,  # 更换UA
-        }
-    }
-    chrome_options.add_experimental_option("prefs", prefs)
-    chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
-    if platform.system() == "Windows":
-        driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
-    elif platform.system() == "Linux":
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument('--disable-gpu')
-        chrome_options.add_argument('--no-sandbox')
-        driver = webdriver.Chrome(
-            executable_path="/usr/bin/chromedriver",
-            chrome_options=chrome_options)
+
+
 
     def __init__(self, word,*args, **kwargs):
         super(eval(self.__class__.__name__), self).__init__(*args, **kwargs)
         self.word = word
+        self.driver = None
+
+    def closed(self, reason):
+        try:
+            count1, update_company = MysqlConnection.execute_sql(
+                "update job set is_checked = 1 where company_name = '{}'".format(self.word))
+        except:
+            MysqlConnection.execute_sql(
+                "update job set is_checked = 0 where company_name = '{}'".format(self.word))
+        self.driver.close()
+        self.driver.quit()
+        print('spider关闭原因:', reason)
 
     def start_requests(self):
-        source = self.autologin(text_login='请输入11位手机号码', text_password='请输入登录密码',username="15806204096",password="Wangjian123456")
+        chrome_options = webdriver.ChromeOptions()
+        # proxy_url = get_random_proxy()
+        # print(proxy_url + "代理服务器正在爬取")
+        # chrome_options.add_argument('--proxy-server=https://' + proxy_url.strip())
+        prefs = {
+            'profile.default_content_setting_values': {
+                # 'images': 2,  # 不加载图片
+                "User-Agent": UserAgent().random,  # 更换UA
+            }
+        }
+        chrome_options.add_experimental_option("prefs", prefs)
+        chrome_options.add_experimental_option('excludeSwitches', ['enable-automation'])
+        if platform.system() == "Windows":
+            self.driver = webdriver.Chrome('chromedriver.exe', chrome_options=chrome_options)
+        elif platform.system() == "Linux":
+            chrome_options.add_argument("--headless")
+            chrome_options.add_argument('--disable-gpu')
+            chrome_options.add_argument('--no-sandbox')
+            self.driver = webdriver.Chrome(
+                executable_path="/usr/bin/chromedriver",
+                chrome_options=chrome_options)
+        source = self.autologin(text_login='请输入11位手机号码', text_password='请输入登录密码',username="15599029013",password="zhao1234")
         yield Request(url="https://www.tianyancha.com", callback=self.parse,
                       meta={'params': (self.word, source)}, dont_filter=True)
 
@@ -76,6 +91,8 @@ class TianYanSpider(scrapy.Spider):
         word, source = response.meta.get("params")
         links = source.xpath("//div[@class='search-result-single   ']/div[@class='content']/div[@class='header']/a/@href")
         while len(source.xpath('//a[@class="num -next"]')) == 1:
+            if len(source.xpath('//span[@class="js-head-title"]'))>0:
+                break
             next_page = self.driver.find_element_by_xpath('//a[@class="num -next"]')
             next_page.click()
             print(self.driver.current_url)
@@ -90,8 +107,8 @@ class TianYanSpider(scrapy.Spider):
         word, links = response.meta.get("params")
         for link in links:
             print(link)
+            time.sleep(10)
             self.driver.execute_script("window.open('%s')" % link)
-            time.sleep(5)
             self.driver.switch_to.window(self.driver.window_handles[1])
             try:
                 WebDriverWait(self.driver, timeout=10).until(
@@ -108,7 +125,11 @@ class TianYanSpider(scrapy.Spider):
             try:
                 item["legal_representative"]= html.xpath("//div[@class='humancompany']/div[@class='name']/a/text()")[0]
             except:
-                item["legal_representative"] = remove_html(etree.tostring(html.xpath("//div[@class='legal-representative']")[0],encoding='utf-8').decode('utf-8'))
+                try:
+                    item["legal_representative"] = remove_html(etree.tostring(html.xpath("//div[@class='legal-representative']")[0],encoding='utf-8').decode('utf-8'))
+                except:
+                    continue
+
             table=html.xpath("//table[@class='table -striped-col -border-top-none -breakall']")[0]
             item["registered_capital"] = remove_html(etree.tostring(table.xpath("./tbody/tr[1]/td[2]")[0],encoding='utf-8').decode('utf-8'))
             item["reality_capital"] = table.xpath("./tbody/tr[1]/td[4]/text()")[0]
@@ -149,7 +170,7 @@ class TianYanSpider(scrapy.Spider):
         tracks = [0]
         offsets = [0]
         for t in np.arange(0.0, seconds, 0.1):
-            offset = round(self.ease_out_expo(t / seconds) * distance)
+            offset = round(self.ease_out_quart(t / seconds) * distance)
             tracks.append(offset - offsets[-1])
             offsets.append(offset)
         return offsets, tracks
@@ -161,6 +182,7 @@ class TianYanSpider(scrapy.Spider):
     @return: 
     '''
     def autologin(self, text_login, text_password,username,password):
+
         self.driver.get('http://www.tianyancha.com')
         time.sleep(2)
         self.driver.maximize_window()
@@ -173,9 +195,9 @@ class TianYanSpider(scrapy.Spider):
             pass
 
 
-        with open("tianyan.html", "a+") as f:
-            f.writelines(self.driver.page_source)
-            f.writelines("\n")
+        # with open("tianyan.html", "a+",encoding='utf-8') as f:
+        #     f.writelines(self.driver.page_source)
+        #     f.writelines("\n")
         # 登陆按钮
         self.driver.find_element_by_xpath('//*[@id="web-content"]/div/div[1]/div[1]/div/div/div[2]/div/div[4]/a').click()
         time.sleep(2)
@@ -190,57 +212,16 @@ class TianYanSpider(scrapy.Spider):
         self.driver.find_elements_by_xpath("//input[@placeholder='{}']".format(text_password))[-1].send_keys(password)
         clixp = './/div[@class="modal-dialog -login-box animated"]/div/div[2]/div/div/div[3]/div[2]/div[5]'
         self.driver.find_element_by_xpath(clixp).click()
-        time.sleep(2)
+        time.sleep(1)
 
-        # 获取图
-        img = self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[1]/div[2]/div[1]')
-        time.sleep(0.5)
-        location = img.location
-        size = img.size
-        top, bottom, left, right = location['y'], location['y'] + size['height'], location['x'], location['x'] + size[
-            'width']
-        # 截取第一张图片(无缺口的)
-        screenshot = self.driver.get_screenshot_as_png()
-        time.sleep(2)
-        screenshot = Image.open(BytesIO(screenshot))
-        captcha1 = screenshot.crop((left, top, right, bottom))
-        print('--->', captcha1.size)
-        captcha1.save('captcha1.png')
-
-        # 获取第二张图，先点击滑块
-        self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[2]/div[2]').click()
-        time.sleep(2)
-        img1 = self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[1]/div[2]/div[1]')
-        time.sleep(0.5)
-        location1 = img1.location
-        size1 = img1.size
-        top1, bottom1, left1, right1 = location1['y'], location1['y'] + size1['height'], location1['x'], location1[
-            'x'] + size1['width']
-        screenshot = self.driver.get_screenshot_as_png()
-        screenshot = Image.open(BytesIO(screenshot))
-        captcha2 = screenshot.crop((left1, top1, right1, bottom1))
-        captcha2.save('captcha2.png')
-
-        # 获取偏移量
-        left = 50  # 这个是去掉开始的一部分
-        for i in range(left, captcha1.size[0]):  # 长
-            for j in range(captcha1.size[1]):  # 宽
-                # 判断两个像素点是否相同
-                pixel1 = captcha1.load()[i, j]
-                pixel2 = captcha2.load()[i, j]
-                threshold = 60
-                if abs(pixel1[0] - pixel2[0]) < threshold and abs(pixel1[1] - pixel2[1]) < threshold and abs(
-                        pixel1[2] - pixel2[2]) < threshold:
-                    pass
-                else:
-                    left = i
-        print('缺口位置', left)
-
-        time.sleep(3)
-
+        left = self.get_left()
+        while left == 260:
+            self.driver.find_element_by_xpath('//a[@class="gt_refresh_button"]').click()
+            time.sleep(1)
+            left = self.get_left()
         left -= 50
         # 开始移动
-        offsets, tracks = self.get_tracks(left, 12)
+        offsets, tracks = self.get_tracks(left, 10)
         # 拖动滑块
         starttime = time.time()
         slider = self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[2]/div[2]')
@@ -265,13 +246,56 @@ class TianYanSpider(scrapy.Spider):
                 print('login success')
         except:
             print('login success')
-        time.sleep(2)
+        time.sleep(1)
         self.driver.get(self.base_url + self.word)
         source = etree.HTML(self.driver.page_source)
         print(source.xpath('//*[@id="web-content"]/div/div[1]/div[3]/div[2]/div[1]/div/div[3]/div[1]/a/@href'))
         return source
 
+    def get_left(self):
+        # 获取图
+        img = self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[1]/div[2]/div[1]')
+        time.sleep(1)
+        location = img.location
+        size = img.size
+        top, bottom, left, right = location['y'], location['y'] + size['height'], location['x'], location['x'] + size[
+            'width']
+        # 截取第一张图片(无缺口的)
+        screenshot = self.driver.get_screenshot_as_png()
+        time.sleep(2)
+        screenshot = Image.open(BytesIO(screenshot))
+        captcha1 = screenshot.crop((left, top, right, bottom))
+        print('--->', captcha1.size)
+        captcha1.save('captcha1.png')
 
+        # 获取第二张图，先点击滑块
+        self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[2]/div[2]').click()
+        time.sleep(2)
+        img1 = self.driver.find_element_by_xpath('/html/body/div[10]/div[2]/div[2]/div[1]/div[2]/div[1]')
+        location1 = img1.location
+        size1 = img1.size
+        top1, bottom1, left1, right1 = location1['y'], location1['y'] + size1['height'], location1['x'], location1[
+            'x'] + size1['width']
+        screenshot = self.driver.get_screenshot_as_png()
+        screenshot = Image.open(BytesIO(screenshot))
+        captcha2 = screenshot.crop((left1, top1, right1, bottom1))
+        captcha2.save('captcha2.png')
+
+        # 获取偏移量
+        left = 50  # 这个是去掉开始的一部分
+        for i in range(left, captcha1.size[0]):  # 长
+            for j in range(captcha1.size[1]):  # 宽
+                # 判断两个像素点是否相同
+                pixel1 = captcha1.load()[i, j]
+                pixel2 = captcha2.load()[i, j]
+                threshold = 100
+                if abs(pixel1[0] - pixel2[0]) < threshold and abs(pixel1[1] - pixel2[1]) < threshold and abs(
+                        pixel1[2] - pixel2[2]) < threshold:
+                    pass
+                else:
+                    left = i
+        print('缺口位置', left)
+        return left
 
     def ease_out_quad(self,x):
         return 1 - (1 - x) * (1 - x)
@@ -284,4 +308,20 @@ class TianYanSpider(scrapy.Spider):
             return 1
         else:
             return 1 - pow(2, -10 * x)
+
+
+    def ease_out_bounce(self,x):
+        n1 = 7.5625
+        d1 = 2.75
+        if x < 1 / d1:
+            return n1 * x * x
+        elif x < 2 / d1:
+            x -= 1.5 / d1
+            return n1 * x * x + 0.75
+        elif x < 2.5 / d1:
+            x -= 2.25 / d1
+            return n1 * x * x + 0.9375
+        else:
+            x -= 2.625 / d1
+            return n1 * x * x + 0.984375
 

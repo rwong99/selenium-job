@@ -3,8 +3,8 @@
 import MySQLdb
 
 # 主类
-from job.settings import MYSQL_HOST, MYSQL_PORT, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DBNAME, MYSQL_CHARSET
-
+from scrapy.cmdline import execute
+from scrapy.utils.project import get_project_settings
 
 class MysqlConnection(object):
     def __init__(self, host, port, user, passwd, db, charset='utf8'):
@@ -64,9 +64,10 @@ class MysqlConnection(object):
     def execute_sql(cls, sql, args=(), fetch=True):
         count = 0
         rt_list = []
-        conn = MysqlConnection(host=MYSQL_HOST, port=MYSQL_PORT, user=MYSQL_USER, passwd=MYSQL_PASSWORD,
-                               db=MYSQL_DBNAME, 
-                               charset=MYSQL_CHARSET)
+        settings = get_project_settings()
+        conn = MysqlConnection(host=settings.get('MYSQL_HOST'), port=settings.get('MYSQL_PORT'), user=settings.get('MYSQL_USER'), passwd=settings.get('MYSQL_PASSWORD'),
+                               db=settings.get('MYSQL_DBNAME'),
+                               charset=settings.get('MYSQL_CHARSET'))
         print(sql)
         if fetch:
             count, rt_list = conn.fetch(sql, args)
@@ -91,10 +92,11 @@ def execute_sql(sql, args=(), fetch=True):
     conn = None
     count = 0
     rt = ()
+    settings = get_project_settings()
     try:
-        conn = MySQLdb.connect(host=MYSQL_HOST, port=MYSQL_PORT, \
-                               user=MYSQL_USER, passwd=MYSQL_PASSWORD, db=MYSQL_DBNAME, \
-                               charset=MYSQL_CHARSET)
+        conn = MySQLdb.connect(host=settings.get('MYSQL_HOST'), port=settings.get('MYSQL_PORT'), user=settings.get('MYSQL_USER'), passwd=settings.get('MYSQL_PASSWORD'),
+                               db=settings.get('MYSQL_DBNAME'),
+                               charset=settings.get('MYSQL_CHARSET'))
 
         cur = conn.cursor()
         print('dbutils sql:%s, args = %s' % (sql, args))
@@ -126,11 +128,11 @@ def batch_execute_sql(sql, rt_list=[]):
     conn = None
     count = 0
     rt = ()
-
+    settings = get_project_settings()
     try:
-        conn = MySQLdb.connect(host=MYSQL_HOST, port=MYSQL_PORT, \
-                               user=MYSQL_USER, passwd=MYSQL_PASSWORD, db=MYSQL_DBNAME, \
-                               charset=MYSQL_CHARSET)
+        conn = MySQLdb.connect(host=settings.get('MYSQL_HOST'), port=settings.get('MYSQL_PORT'), user=settings.get('MYSQL_USER'), passwd=settings.get('MYSQL_PASSWORD'),
+                               db=settings.get('MYSQL_DBNAME'),
+                               charset=settings.get('MYSQL_CHARSET'))
 
         cur = conn.cursor()
         print(sql)
@@ -160,5 +162,9 @@ if __name__ == '__main__':
     # cnt, rt_list = conn.fetch('select * from user')
     # print cnt,rt_list
     # conn.close()
-    count, rt_list = MysqlConnection.execute_sql('insert into company(code) values(%s)', ('1',))
-    print(rt_list)
+    # count, rt_list = MysqlConnection.execute_sql('insert into company(code) values(%s)', ('1',))
+    # print(rt_list)
+    count0, company_name = MysqlConnection.execute_sql('select company_name from job where is_checked != 1 or is_checked is null limit 1')
+    print(company_name[0][0])
+    execute("scrapy crawl tianyan -a word={}".format(company_name[0][0]).split())
+

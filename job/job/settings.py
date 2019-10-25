@@ -34,17 +34,17 @@ sys.path.insert(0, os.path.join(BASE_DIR, 'job'))
 
 
 MYSQL_HOST = "192.168.2.7"
-MYSQL_PASSWORD = "186"
+MYSQL_PORT = 186
 # MYSQL_HOST = "127.0.0.1"
 # MYSQL_PASSWORD = "3306"
 MYSQL_DBNAME = "scrapy"
 MYSQL_USER = "root"
-MYSQL_PORT = 3306
+MYSQL_PASSWORD = "123456"
 MYSQL_CHARSET = "utf8"
 
 ITEM_PIPELINES = {
-    'job.pipelines.MysqlTwistedPipline': 2,  # 连接池异步插入
-    'job.pipelines.JsonExporterPipleline': 1,  # 连接池异步插入
+    'job.pipelines.MysqlPipeline': 2,  # 连接池异步插入
+    'job.pipelines.JsonExporterPipleline': 1,
 }
 
 DOWNLOADER_MIDDLEWARES = {
